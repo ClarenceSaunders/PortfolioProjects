@@ -1,0 +1,21 @@
+SELECT * FROM `my-pinned-project.Unaffordable_healthy_diet_percentages.World Food Affordability` 
+where country = 'Burundi'
+order by year
+--
+SELECT Country, Year, Share_of_Population
+FROM `my-pinned-project.Unaffordable_healthy_diet_percentages.World Food Affordability`
+where Share_of_Population > 50 AND Country = 'Angola'
+Order By Year
+--
+SELECT max(Share_of_Population) AS max_percentage
+FROM `my-pinned-project.Unaffordable_healthy_diet_percentages.World Food Affordability`
+where Year = '2021'AND Country = 'Angola'
+--
+SELECT avg(Share_of_Population) AS Avg_Percentage
+FROM `my-pinned-project.Unaffordable_healthy_diet_percentages.World Food Affordability`
+where Country = 'Angola' 
+--
+SELECT Distinct Country, AVG(Share_of_Population) AS AVG_Percentage
+FROM `my-pinned-project.Unaffordable_healthy_diet_percentages.World Food Affordability`
+WHERE Year = '2020'
+GROUP BY Country
